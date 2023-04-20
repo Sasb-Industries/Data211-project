@@ -27,6 +27,3 @@ Run statistics to determine if there is a significant relationship
 timeModel <- lm(`Sleep Hours` ~ `Screen Hours`, data = SleepandScreenTimeData)
 summary(timeModel)
 ```
-Test
-test 2
-
