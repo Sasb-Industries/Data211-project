@@ -1,0 +1,31 @@
+---
+title: "Data211-Project"
+author: "Sasha Johnson"
+date: "2023-04-20"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+Generating graph for sleep to screen time relationship
+```{r}
+library(ggplot2)
+library(tidyverse)
+
+ggplot(SleepandScreenTimeData, aes(x = `Screen Hours`, y = `Sleep Hours`)) +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  ggtitle("Sleep and Screen Time Data") +
+  xlim(3, 10) + ylim(0, 10)
+```
+
+Run statistics to determine if there is a significant relationship
+```{r}
+timeModel <- lm(`Sleep Hours` ~ `Screen Hours`, data = SleepandScreenTimeData)
+summary(timeModel)
+```
+Test
+
