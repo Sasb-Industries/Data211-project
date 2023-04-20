@@ -28,4 +28,5 @@ timeModel <- lm(`Sleep Hours` ~ `Screen Hours`, data = SleepandScreenTimeData)
 summary(timeModel)
 ```
 Test
+test 2
 
